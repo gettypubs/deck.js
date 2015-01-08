@@ -1,8 +1,10 @@
-This is an experiemental demo exploring the possibilities of using the open source presentation software [Deck.js](http://imakewebthings.com/deck.js/) as a digital publication tool. The text and images used in this demo are "The Invention of Photography in the Victorian World" by Jennifer Green-Lewis, which was published in the book [*A Royal Passion: Queen Victoria and Photography*](http://shop.getty.edu/products/a-royal-passion-queen-victoria-and-photography-978-1606061558), © Getty Publications, 2014.
+This is an experiemental demo exploring the possibilities of using the open source presentation software [Deck.js](http://imakewebthings.com/deck.js/) as a digital publication tool for art books. The text and images used in this demo are "The Invention of Photography in the Victorian World" by Jennifer Green-Lewis, an essay originally published in the book [*A Royal Passion: Queen Victoria and Photography*](http://shop.getty.edu/products/a-royal-passion-queen-victoria-and-photography-978-1606061558), © Getty Publications, 2014.
+
+View the demo online at: [gettypubs.github.io/inventionofphoto-deck.js](http://gettypubs.github.io/inventionofphoto-deck.js)
 
 ## Basics
 
-All the publication conent lives in inventionofphoto-deckjs.html.
+Deck.js comes with some built in navigation. Click the arrows, or use the arrow keys, to move from section to section. Use the "M" keyboard shortcut to see all the sections.
 
 ## Scaling
 
@@ -23,6 +25,6 @@ Core includes stripped down black and white print styles for the standard slide 
 
 ## License
 
-Deck.js is Copyright (c) 2011-2014 Caleb Troughton, and licensed under the [MIT license](https://github.com/imakewebthings/deck.js/blob/master/MIT-license.txt)
+Deck.js Copyright © 2011-2014 Caleb Troughton, and licensed under the [MIT license](https://github.com/imakewebthings/deck.js/blob/master/MIT-license.txt)
 
-"The Invention of Photography in the Victorian World" is Copyright (c) 2011-2014 Getty Publications.
+"The Invention of Photography in the Victorian World" Copyright © 2011-2014 Getty Publications.
