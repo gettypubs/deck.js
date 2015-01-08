@@ -2,9 +2,9 @@ This is an experiemental demo exploring the possibilities of using the open sour
 
 View the demo online at: [gettypubs.github.io/inventionofphoto-deck.js](http://gettypubs.github.io/inventionofphoto-deck.js)
 
-## Basics
+## Navigation
 
-Deck.js comes with some built in navigation. Click the arrows, or use the arrow keys, to move from section to section. Use the "M" keyboard shortcut to see all the sections.
+Deck.js comes with some built in navigation: click the arrows or use the arrow keys to move from section to section in the publication; sroll down to read sections; sse the "M" keyboard shortcut to see thumbnails of all the sections.
 
 ## Scaling
 
