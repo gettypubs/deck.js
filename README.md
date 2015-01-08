@@ -42,16 +42,16 @@ A digital book in Deck.js is structured the same way, but instead of the heading
 
 Deck.js comes with some familiar, built in navigation functions and animations that work perfectly for digital books: use the left and right arrows to move from section to section in the publication; scroll down to read sections; and use the "M" keyboard shortcut to see thumbnails of all the sections. There's also a counter in the lower-right that tells readers where they are within the publication.
 
-## Reading
+## Vertical Scrolling for Reading
 
-While the navigation in Deck.js works almost perfectly as is for digital books, out of the box it does not allow for the overflow necessary for longer blocks of text. All content within the individual slides is scaled to fit within the height of the browser window. To remedy this for digital publications and allow for vertical scrolling, you must disable the Scale extenstion that comes with the standard Deck.js package. You can do this by deleting the CSS and JS references and associated files in your main HTML file:
+While the navigation in Deck.js works almost perfectly as is for digital books, it does not automatically allow for the overflow necessary for longer blocks of text. All content within the individual slides is by default scaled to fit within the height of the browser window. To remedy this for digital publications and allow for the vertical scrolling needed for longer texts, you must disable the Scale extenstion that comes with the standard Deck.js package. You can do this by deleting the CSS and JS references and associated files in your main HTML file:
 
 ```html
 <link rel="stylesheet" media="screen" href="extensions/status/deck.scale.css">
 <script src="extensions/status/deck.scale.js"></script>
 ```
 
-Or, you can add $.deck('disableScale') to the initialization script at the end of the main HTML file:
+Or, you can add `$.deck('disableScale')` to the initialization script at the end of the main HTML file:
 
 ```html
 <script>
@@ -61,6 +61,10 @@ Or, you can add $.deck('disableScale') to the initialization script at the end o
   });
 </script>
 ```
+
+## Styling
+
+Deck.js comes with three Themes for styling slides. These do tend to be specific for slides though, so some custom CSS work is necessary to account for paragraphs of text and the like.
 
 ## Extensions, Themes, and Related Projects
 
