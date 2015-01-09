@@ -20,17 +20,14 @@
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:300,600' rel='stylesheet' type='text/css'>
   
   <style type="text/css">
-  		body {
-			background-color: #eee;  }
   		.deck-container {
 			font-family: "Helvetica Neue", sans-serif;
 			font-size: 1em;
 			color: #444;
-			background: #fff; 
 			line-height: 1.65em; }
 		section.slide {
 			margin: 0 auto;
-			padding: 2.5em 48px 0px;
+			padding: 0 48px 0px;
 			background-position: fixed;
 			background-size: cover;
 			background-repeat: no-repeat;
@@ -61,6 +58,7 @@
 			color: #fff;
 			padding-bottom: .25em;
 			margin-bottom: .5em;
+			margin-top:1.25em;
 			font-size: 4.5em; 
 			line-height: 1.1em;		
 			border-bottom: 2px solid #fff; 
@@ -109,7 +107,7 @@
 			position: fixed;
 			bottom: 10px;
 			right: 84px;
-			color: #888;
+			color: #ccc;
 			z-index: 3;
 			margin: 0; }
 		.deck-menu .deck-current, .no-touch .deck-menu .slide:hover {
@@ -123,15 +121,17 @@
 			position: fixed;
 			bottom: 10px;
 			right: 24px;
-			color: #888;
+			color: #ccc;
 			z-index: 3;
-			margin: 0; }	
+			margin: 0; }
+    	.deck-menu-link:link, .deck-menu-link:visited, .deck-menu-link:hover, .deck-menu-link:focus, .deck-menu-link:active {
+      		color: #ccc; } 	
 		.demo-banner {
 			position: fixed;
 			z-index: 4;
 			top: 0;
 			left: 0;
-			height: 30px;
+			height: 26px;
 			width: 100%;
 			text-align: center;
 			text-decoration: none;
@@ -146,8 +146,43 @@
 		::selection {
 			background: #ccc;
 			color: inherit; }	
+		#logo {
+			position: fixed;
+			bottom: 20px;
+			left: 48px; 
+			width: 60px;
+			height: 60px; }
+		#cover {
+			background-color: #59420B; }
 			
-
+			
+		@media only screen and (max-width:768px) {
+			section.slide {
+				padding: 2.5em 40px 0px 48px; }
+			.essaytext { 
+				width: 100%;
+				margin: 10% 0%; }
+			.deck-prev-link, .deck-next-link {
+				display: block; }
+			.deck-next-link {
+				right: 4px; }	
+			.deck-prev-link {
+				left: 4px; }
+			.deck-nav-disabled {
+				display: none; }
+			h2 {
+				width: 100%; }	
+			#logo {
+				position: relative;
+				bottom: inherit;
+				left: inherit;
+				margin-top: 30px;
+				width: 60px;
+				height: 60px; }	
+			.secondary {
+				display: none; }					
+		}
+			
 	</style>  
 
   <!-- Transition theme -->
@@ -166,15 +201,16 @@
 
 	<!-- Getty Pubs demo site snippet -->
     <div class="demo-banner">
-      <p>DEMO SITE &#8212; Deck.js as a digital publishing tool &#8212; <a href="https://github.com/gettypubs/inventionofphoto-deck.js" target="_blank">https://github.com/gettypubs/inventionofphoto-deck.js</a> &#8212; Getty Publications</p>
+      <p><a href="https://github.com/gettypubs/inventionofphoto-deck.js" target="_blank">DEMO SITE</a><span class="secondary"> &#8212; Deck.js as a digital publishing tool &#8212; <a href="https://github.com/gettypubs/inventionofphoto-deck.js" target="_blank">https://github.com/gettypubs/inventionofphoto-deck.js</a> &#8212; Getty Publications</span></p>
     </div>
 
     <!-- Begin slides -->
 
-	<section class="slide" style="background-image:url(images/16076_crop.jpg);">
+	<section class="slide" style="background-image:url(images/16076_crop.jpg)">
 		<div>
 			<h2>The Invention of Photography in the Victorian World</h2>
 			<h3 id="author">Jennifer Green-Lewis</h3>
+			<a href="http://www.getty.edu/publications" title="Getty Publications"><img id="logo" alt="Getty Publications" src="images/gettylogo_ffffff_400px.png"></a>
 		</div>
 	</section>
 
@@ -553,9 +589,7 @@
     </p>
     
     <!-- Getty Pubs menu snippet -->
-    <p class="deck-menu-link">
-      MENU
-    </p>
+    <a href="#" onclick="$.deck('toggleMenu')" class="deck-menu-link">MENU</a>
 
     
     <!-- End extension snippets -->
