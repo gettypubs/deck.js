@@ -125,7 +125,14 @@
 			right: 24px;
 			color: #ccc;
 			z-index: 3;
-			margin: 0; }	
+			margin: 0; }
+    .deck-menu-link:link,
+    .deck-menu-link:visited, 
+    .deck-menu-link:hover, 
+    .deck-menu-link:focus, 
+    .deck-menu-link:active {
+      color: #ccc;
+    } 	
 		.demo-banner {
 			position: fixed;
 			z-index: 4;
@@ -559,9 +566,7 @@
     </p>
     
     <!-- Getty Pubs menu snippet -->
-    <p class="deck-menu-link">
-      MENU
-    </p>
+    <a href="#" onclick="$.deck('toggleMenu')" class="deck-menu-link">MENU</a>
 
     
     <!-- End extension snippets -->
