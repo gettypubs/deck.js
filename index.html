@@ -154,7 +154,8 @@
 			height: 60px; }
 		#cover {
 			background-color: #59420B; }
-			
+		#nav {
+			text-align: center; }
 			
 		@media only screen and (max-width:768px) {
 			section.slide {
@@ -162,7 +163,7 @@
 			.essaytext { 
 				width: 100%;
 				margin: 10% 0%; }
-			.deck-prev-link, .deck-next-link {
+			.deck-prev-link, .deck-next-link, .touch .deck-container:hover .deck-prev-link, .touch .deck-container:hover .deck-next-link {
 				display: block; }
 			.deck-next-link {
 				right: 4px; }	
@@ -180,7 +181,7 @@
 				width: 60px;
 				height: 60px; }	
 			.secondary {
-				display: none; }					
+				display: none; }			
 		}
 			
 	</style>  
@@ -576,7 +577,7 @@
     <!-- Begin extension snippets  -->
 
     <!-- deck.navigation snippet -->
-    <div aria-role="navigation">
+    <div id="nav" aria-role="navigation">
       <a href="#" class="deck-prev-link" title="Previous">&#8592;</a>
       <a href="#" class="deck-next-link" title="Next">&#8594;</a>
     </div>
