@@ -161,14 +161,16 @@
 			.essaytext { 
 				width: 100%;
 				margin: 10% 0%; }
-			.deck-prev-link, .deck-next-link, .touch .deck-container:hover .deck-prev-link, .touch .deck-container:hover .deck-next-link, {
-				display: block; }
+			.deck-prev-link, .deck-next-link {
+  				display: block; }
+			.deck-container .deck-prev-link.deck-nav-disabled, .deck-container .deck-next-link.deck-nav-disabled {
+				display: none; }
+			.touch .deck-container:hover .deck-prev-link, .touch .deck-container:hover .deck-next-link {
+				display: block; }	
 			.deck-next-link {
 				right: 4px; }	
 			.deck-prev-link {
 				left: 4px; }
-			.touch .deck-container:hover .deck-prev-link .deck-nav-disabled {
-				display: none; }
 			h2 {
 				width: 100%; }	
 			#logo {
