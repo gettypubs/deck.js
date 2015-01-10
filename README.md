@@ -2,6 +2,8 @@ This is an experiemental demo exploring the possibilities of using the open sour
 
 View the demo online at: [gettypubs.github.io/inventionofphoto-deck.js](http://gettypubs.github.io/inventionofphoto-deck.js)
 
+See too another Deck.js publication, [*The Last Cartographer*](http://digitalpathways.net/lastcartographer/original/), from Simon Fraser University. (Read more about it [here](http://digitalpathways.net/).) Where *The Last Cartographer* is much more a visual, multi-media presentation that takes advantage of the kind of slide- or image-based storytelling Deck.js is built for, the demo here attempts to use Deck.js for a more traditional, text-based publication.
+
 ##Basics
 
 In building a normal presentation with Deck.js you work within a single HTML file and add slides with simple section tags:
@@ -38,13 +40,11 @@ A digital book in Deck.js is structured the same way, but instead of the heading
   </section>
 ```
 
-## Navigation
+## Modifications
 
-Deck.js comes with some familiar, built in navigation functions and animations that work perfectly for digital books: use the left and right arrows to move from section to section in the publication; scroll down to read sections; and use the "M" keyboard shortcut to see thumbnails of all the sections. There's also a counter in the lower-right that tells readers where they are within the publication.
+### Vertical Scrolling for Reading
 
-## Vertical Scrolling for Reading
-
-While the navigation in Deck.js works almost perfectly as is for digital books, it does not automatically allow for the overflow necessary for longer blocks of text. All content within the individual slides is by default scaled to fit within the height of the browser window. To remedy this for digital publications and allow for the vertical scrolling needed for longer texts, you must disable the Scale extenstion that comes with the standard Deck.js package. You can do this by deleting the CSS and JS references and associated files in your main HTML file:
+The first thing we need to account for is that Deck.js does not automatically allow for the overflow necessary for longer blocks of text. All content within the individual slides is by default scaled to fit within the height of the browser window. To remedy this for digital publications and allow for the vertical scrolling needed for longer texts, you must disable the Scale extenstion that comes with the standard Deck.js package. You can do this by deleting the CSS and JS references and associated files in your main HTML file:
 
 ```html
 <link rel="stylesheet" media="screen" href="extensions/status/deck.scale.css">
@@ -62,7 +62,19 @@ Or, you can add `$.deck('disableScale')` to the initialization script at the end
 </script>
 ```
 
-## Styling
+### Navigation
+
+Deck.js comes with some familiar, built in navigation functions and animations that work perfectly for digital books: including being able to move left to right from section to section, having a counter that tells readers where they are within the publication, and accessing a menu of thumnails of each section much like the thumbnail view table of contents in apps built with Adobe's Digital Publication Suite. 
+
+While the Left and Right arrows come built in to Deck.js as one of the primary extensions and are easily visible on the screen for reader, by default the Menu can only be accessed with "M" on the keyboard. To give readers access to this function, we added a MENU toggle on the lower right, next to the Status counter. 
+
+```html
+<a href="#" onclick="$.deck('toggleMenu')" class="deck-menu-link">MENU</a>
+```
+
+The toggleMenu function is already included in Deck.js, this link merely gives readers a way to access it without knowing the keyboard shortcut. Once included, it can be styled anyway you'd like with CSS, and could also be applied to other elements like an icon or button.
+
+### Styling
 
 Deck.js comes with three Themes for styling slides. These do tend to be specific for slides though, so some custom CSS work is necessary to account for paragraphs of text and the like.
 
