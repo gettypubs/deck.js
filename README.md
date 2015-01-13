@@ -2,7 +2,7 @@ This is an experiemental demo exploring the possibilities of using the open sour
 
 View the demo online at: [gettypubs.github.io/inventionofphoto-deck.js](http://gettypubs.github.io/inventionofphoto-deck.js)
 
-See too another Deck.js publication, [*The Last Cartographer*](http://digitalpathways.net/lastcartographer/original/), from Simon Fraser University. (Read more about it [here](http://digitalpathways.net/).) Where *The Last Cartographer* is much more a visual, multi-media presentation that takes advantage of the kind of slide- or image-based storytelling Deck.js is built for, the demo here attempts to use Deck.js for a more traditional, text-based publication.
+See too another Deck.js publication, [*The Last Cartographer*](http://digitalpathways.net/lastcartographer/original/), from Simon Fraser University. (Read more about *that* project [here](http://digitalpathways.net/).) Where *The Last Cartographer* is much more a visual, multi-media presentation that takes advantage of the kind of slide- or image-based storytelling Deck.js is really built for, the demo here attempts to use Deck.js for a more traditional, text-based publication.
 
 ##Basics
 
@@ -40,7 +40,7 @@ A digital book in Deck.js is structured the same way, but instead of the heading
   </section>
 ```
 
-## Modifications
+## Necessary Modifications
 
 ### Vertical Scrolling for Reading
 
@@ -64,7 +64,7 @@ Or, you can add `$.deck('disableScale')` to the initialization script at the end
 
 ### Navigation
 
-Deck.js comes with some familiar, built in navigation functions and animations that work perfectly for digital books: including being able to move left to right from section to section, having a counter that tells readers where they are within the publication, and accessing a menu of thumnails of each section much like the thumbnail view table of contents in apps built with Adobe's Digital Publication Suite. 
+Deck.js comes with some familiar, built in navigation functions and animations that work perfectly for digital books: including being able to move left to right from section to section, having a counter that tells readers where they are within the publication, and accessing a menu of thumnails of each section much like the thumbnail view table of contents in apps built with Adobe's Digital Publication Suite.
 
 While the Left and Right arrows come built in to Deck.js as one of the primary extensions and are easily visible on the screen for reader, by default the Menu can only be accessed with "M" on the keyboard. To give readers access to this function, we added a MENU toggle on the lower right, next to the Status counter. 
 
