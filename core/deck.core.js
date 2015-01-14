@@ -463,6 +463,7 @@ that use the API provided by core.
       $document.trigger(beforeChangeEvent, [currentIndex, index]);
       if (!beforeChangeEvent.isDefaultPrevented()) {
         $document.trigger(events.change, [currentIndex, index]);
+        $container.scrollTop(0);
         changeHash(currentIndex, index);
         currentIndex = index;
         updateStates();
