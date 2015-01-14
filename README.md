@@ -2,7 +2,7 @@ This is an experiemental demo exploring the possibilities of using the open sour
 
 View the demo online at: [gettypubs.github.io/inventionofphoto-deck.js](http://gettypubs.github.io/inventionofphoto-deck.js)
 
-See too another Deck.js publication, [*The Last Cartographer*](http://digitalpathways.net/lastcartographer/original/), from Simon Fraser University. (Read more about *that* project [here](http://digitalpathways.net/).) Where *The Last Cartographer* is much more a visual, multi-media presentation that takes advantage of the kind of slide- or image-based storytelling Deck.js is really built for, the demo here attempts to use Deck.js for a more traditional, text-based publication.
+See too another Deck.js publication, [*The Last Cartographer*](http://digitalpathways.net/lastcartographer/original/), from Simon Fraser University (read more about it [here](http://digitalpathways.net/).) Where *The Last Cartographer* is much more a visual, multi-media presentation that takes advantage of the kind of slide- or image-based storytelling Deck.js is really built for, the demo here attempts to use Deck.js for a more traditional, text-based publication.
 
 ##Basics
 
@@ -40,7 +40,7 @@ A digital book in Deck.js is structured the same way, but instead of the heading
   </section>
 ```
 
-## Necessary Modifications
+## Modifications
 
 ### Vertical Scrolling for Reading
 
@@ -64,26 +64,43 @@ Or, you can add `$.deck('disableScale')` to the initialization script at the end
 
 ### Navigation
 
-Deck.js comes with some familiar, built in navigation functions and animations that work perfectly for digital books: including being able to move left to right from section to section, having a counter that tells readers where they are within the publication, and accessing a menu of thumnails of each section much like the thumbnail view table of contents in apps built with Adobe's Digital Publication Suite.
+Deck.js comes with some familiar, built in navigation functions and animations that work perfectly for digital books, including being able to move left to right from section to section, and having a counter that gives readers some sense of where they are within the publication. There is also a thumnail view that shows all the sections in the publication, not unlike the thumbnail view in apps built with Adobe's popular Digital Publication Suite. In the iPad screenshots below, Adobe DPS is on the left, Deck.js is on the right:
 
-While the Left and Right arrows come built in to Deck.js as one of the primary extensions and are easily visible on the screen for reader, by default the Menu can only be accessed with "M" on the keyboard. To give readers access to this function, we added a MENU toggle on the lower right, next to the Status counter. 
+![test](https://github.com/gettypubs/inventionofphoto-deck.js/blob/gh-pages/images/readme_01.png)
+
+Because Deck.js was designed with one user in mind, the presenter, there is normally no need to make access to this Menu feature more intuitive, and as a result it can only be accessed by hitting "M" on the keyboard. So, to give readers of our demo publication more direct access to this function, we added a MENU toggle on the lower right, next to the Status counter. Luckily, a `toggleMenu` function is already included in Deck.js, so it is easy to create a link that calls the function. Once created, it can be styled anyway you'd like with CSS, and likewise could also be applied to other elements like an icon or button.
 
 ```html
 <a href="#" onclick="$.deck('toggleMenu')" class="deck-menu-link">MENU</a>
 ```
 
-The toggleMenu function is already included in Deck.js, this link merely gives readers a way to access it without knowing the keyboard shortcut. Once included, it can be styled anyway you'd like with CSS, and could also be applied to other elements like an icon or button.
-
 ### Styling
 
-Deck.js comes with three Themes for styling slides. These do tend to be specific for slides though, so some custom CSS work is necessary to account for paragraphs of text and the like.
+Deck.js comes with three Themes for styling slides. These do tend to be specific for slides though, so some custom CSS work is necessary to account for paragraphs of text and, in our case, figure images, captions and footnotes. For this demo, we started with the "Swiss" theme that's included with Deck.js. We also included some modest responsive styling with media queries to make for a better presentation on tablets and phones.
 
-## Extensions, Themes, and Related Projects
+### Scroll to Top -- not yet implemented
 
-## Dependencies (included in this repository)
+When moving from section to section (left to right) in a Deck.js publication like this demo, you move along the same vertical point in the scroll, rather than automatically being sent back to the top, and the start of the next section.
+
+### Internal Linking -- not yet implemented
+
+All the content lives within a single HTML file, and sections are linked to one another for navigaction with anchor links:
+
+```html
+http://gettypubs.github.io/inventionofphoto-deck.js/#slide-1
+http://gettypubs.github.io/inventionofphoto-deck.js/#slide-2
+http://gettypubs.github.io/inventionofphoto-deck.js/#slide-3
+etc.
+```
+The problem is that this means no existing anchor links will work as expected. So, you can't have have an anchor link for footnote or figure reference.
+
+## Dependencies
 
 - [jQuery](http://jquery.com)
 - [Modernizr](http://modernizr.com)
+- [Google Fonts](https://www.google.com/fonts)
+
+jQuery and Modernizr are dependencies within Deck.js and are included in this repository. Google Fonts were added for this demo and not included in the repo, though would have were this intended for actual publication.
 
 ## Printing
 
