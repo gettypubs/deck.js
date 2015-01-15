@@ -78,11 +78,21 @@ Because Deck.js was designed with one user in mind, the presenter, there is norm
 
 Deck.js comes with three Themes for styling slides. These do tend to be specific for slides though, so some custom CSS work is necessary to account for paragraphs of text and, in our case, figure images, captions and footnotes. For this demo, we started with the "Swiss" theme that's included with Deck.js. We also included some modest responsive styling with media queries to make for a better presentation on tablets and phones.
 
-### Scroll to Top -- not yet implemented
+### Scroll to Top
 
-When moving from section to section (left to right) in a Deck.js publication like this demo, you move along the same vertical point in the scroll, rather than automatically being sent back to the top, and the start of the next section.
+When moving from section to section (left to right) in a Deck.js publication like this demo, you move along the same vertical point in the scroll, rather than automatically being sent back to the top (the start) of the next section. To address this, we added a line to the `deck.core.js` file. It's possible that there is a better way to do this, which could give us a cleaner visual transition and possibly also avoid modifying the core file. However, this seemed the simplest way to make it work, and to do so for the arrow icons, the keyboard shortcuts, *and* touch gestures. All of which serve to change slides/sections in Deck.js.
 
-### Internal Linking -- not yet implemented
+```js
+if (!beforeChangeEvent.isDefaultPrevented()) {
+        $document.trigger(events.change, [currentIndex, index]);
+        $container.scrollTop(0); // <-- this is the new line
+        changeHash(currentIndex, index);
+        currentIndex = index;
+        updateStates();
+      }
+```
+
+### Internal Linking -- not yet modified
 
 All the content lives within a single HTML file, and sections are linked to one another for navigaction with anchor links:
 
@@ -94,6 +104,10 @@ etc.
 ```
 The problem is that this means no existing anchor links will work as expected. So, you can't have have an anchor link for footnote or figure reference.
 
+### Printing -- not yet modified
+
+Deck.js includes stripped down black and white print styles for the standard slide template that is suitable for handouts. It does not work for this publications demo version and should be re-done.
+
 ## Dependencies
 
 - [jQuery](http://jquery.com)
@@ -101,10 +115,6 @@ The problem is that this means no existing anchor links will work as expected. S
 - [Google Fonts](https://www.google.com/fonts)
 
 jQuery and Modernizr are dependencies within Deck.js and are included in this repository. Google Fonts were added for this demo and not included in the repo, though would have were this intended for actual publication.
-
-## Printing
-
-Deck.js includes stripped down black and white print styles for the standard slide template that is suitable for handouts. It is included but not yet updated for digital publication use.
 
 ## License
 
