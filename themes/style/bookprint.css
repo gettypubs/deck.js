@@ -1,0 +1,68 @@
+.deck-container {
+	font-family: "Helvetica Neue", sans-serif;
+	font-size: 1em;
+	color: #444;
+	line-height: 1.65em; }
+.slide#cover {
+	background-image: none; }
+.smallscreenonly {
+	display: none; }
+#logo {
+	display: none; }
+.deck-prev-link, .deck-next-link, .deck-status, .deck-menu-link {
+	display: none; }
+	
+p {
+	margin: 0 0 1em 0; 
+	padding: 0; }	
+blockquote {
+	margin-left: 2em; 
+	font-style: italic; }
+blockquote em {
+	font-style: normal; }	
+a, a:hover, a:focus, a:active, a:visited {
+	color:#701e20; 
+	text-decoration: none; }		
+h2 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight:300; 
+	padding-bottom: .25em;
+	margin-bottom: .5em;
+	margin-top:1.25em;
+	font-size: 4.5em; 
+	line-height: 1.1em;		
+	border-bottom: 2px solid #444; }	
+h3 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	color:#701e20; 
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	line-height: 1.5em; 
+	margin-bottom: 1em; }	
+h3#author {
+	color: #444;
+	margin-bottom: 4em; }			
+.figure {
+	width: 45%;
+	max-width: 500px;
+	float: right;
+	clear: right;
+	margin: 1em;
+	border-bottom: 1px solid #ccc; } 	
+.figure p, #notes p {
+	font-size: .7em; 
+	line-height: 1.65em; }
+.figure img {
+	width:100%;
+	margin-bottom: .25em; }
+.figurenumber {
+	text-align: center;
+	color:#701e20; 
+	letter-spacing: 2px;
+	text-transform: uppercase; 
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600; 
+	margin-bottom: 0; }	
+		
+	

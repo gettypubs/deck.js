@@ -1,0 +1,172 @@
+.deck-container {
+	font-family: "Helvetica Neue", sans-serif;
+	font-size: 1em;
+	color: #444;
+	line-height: 1.65em; }
+section.slide {
+	margin: 0 auto;
+	padding: 0 48px 0px;
+	width: 100%; }	
+section.slide#cover {
+	background-image: url('../../images/16076_crop.jpg');
+	background-position: fixed;
+	background-size: cover;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover; 
+	-moz-box-sizing: border-box;
+	box-sizing: border-box; }		
+.essaytext { 
+	width: 50%;
+	min-width: 300px; 
+	margin: 10% 25%; }
+p {
+	margin: 0 0 1em 0; 
+	padding: 0; }	
+blockquote {
+	margin-left: 2em; 
+	font-style: italic; }
+blockquote em {
+	font-style: normal; }	
+a, a:hover, a:focus, a:active, a:visited {
+	color:#701e20; 
+	text-decoration: none; }		
+h2 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight:300; 
+	color: #fff;
+	padding-bottom: .25em;
+	margin-bottom: .5em;
+	margin-top:1.25em;
+	font-size: 4.5em; 
+	line-height: 1.1em;		
+	border-bottom: 2px solid #fff; 
+	width: 70%; }	
+h3 {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	color:#701e20; 
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	line-height: 1.5em; 
+	margin-bottom: 1em; }	
+h3#author {
+	color: #fff; }			
+.figure {
+	width: 70%;
+	margin: 1em 15%;
+	border-bottom: 1px solid #ccc; } 	
+.figure p, #notes p {
+	font-size: .7em; 
+	line-height: 1.65em; }
+.figure img {
+	width:100%;
+	margin-bottom: .25em; }
+.figurenumber {
+	text-align: center;
+	color:#701e20; 
+	letter-spacing: 2px;
+	text-transform: uppercase; 
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600; 
+	margin-bottom: 0; }
+.deck-prev-link, .deck-next-link {
+	position: fixed; 
+	background: #701e20;
+	line-height: 1.45em; }	
+.deck-next-link {
+	right: 24px; }	
+.deck-prev-link {
+	left: 24px; }	
+.deck-prev-link:hover, .deck-prev-link:focus, .deck-next-link:hover, .deck-next-link:focus {
+	background: #701e20; }		
+.deck-status {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	position: fixed;
+	bottom: 10px;
+	right: 84px;
+	color: #ccc;
+	z-index: 3;
+	margin: 0; }
+.deck-menu .deck-current, .no-touch .deck-menu .slide:hover {
+	background-color: #888; 
+	opacity: .7; }
+.deck-menu {
+	margin-top: 30px; }	
+.deck-menu-link {
+	font-family: 'Josefin Sans', sans-serif;
+	font-weight: 600;
+	position: fixed;
+	bottom: 10px;
+	right: 24px;
+	color: #ccc;
+	z-index: 3;
+	margin: 0; }
+.deck-menu-link:link, .deck-menu-link:visited, .deck-menu-link:hover, .deck-menu-link:focus, .deck-menu-link:active {
+	color: #ccc; } 	
+.demo-banner {
+	position: fixed;
+	z-index: 4;
+	top: 0;
+	left: 0;
+	height: 26px;
+	width: 100%;
+	text-align: center;
+	text-decoration: none;
+	color: #fff;
+	background: #0188ca;
+	font-size: .7em; }
+.demo-banner a {
+	color: #fff; }	
+::-moz-selection {
+	background: #ccc;
+	color: inherit; }
+::selection {
+	background: #ccc;
+	color: inherit; }	
+#logo {
+	position: fixed;
+	bottom: 20px;
+	left: 48px; 
+	width: 60px;
+	height: 60px; }		
+.smallscreenonly {
+	display: none; }
+	
+	
+@media only screen and (max-width:768px) {
+	section.slide {
+		padding: 2.5em 5% 0px 6%; }
+	.essaytext { 
+		width: 100%;
+		min-width: 0;
+		margin: 10% 0%; }		
+	.deck-next-link {
+		right: 4px; }	
+	.deck-prev-link {
+		left: 4px; }
+	h2 {
+		width: 100%; }	
+	#logo {
+		position: relative;
+		bottom: inherit;
+		left: inherit;
+		margin-top: 30px;
+		width: 60px;
+		height: 60px; }	
+	.bigscreenonly {
+		display: none; }	
+	.smallscreenonly {
+		display: block; }		
+	#swipe {
+		float: right;
+		margin: 0;
+		padding: 0;  }						
+	@media only screen and (max-width:480px) {
+		h2 {
+			margin-top:.25em;
+			font-size: 3em; }			
+	}
+}
