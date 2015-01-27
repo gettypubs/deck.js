@@ -1,15 +1,14 @@
 .deck-container {
-	font-family: "Helvetica Neue", sans-serif;
+	font-family: "Tinos", serif;
 	font-size: 1em;
 	color: #444;
 	line-height: 1.65em; }
 section.slide {
 	margin: 0 auto;
-	padding: 0 48px 0px;
-	width: 100%; }	
+	padding: 0px 48px; }	
 section.slide#cover {
-	background-image: url('../../images/16076_crop.jpg');
-	background-position: fixed;
+	background-image: url('../../images/16076.jpg');
+	background-position: bottom left;
 	background-size: cover;
 	background-repeat: no-repeat;
 	-webkit-background-size: cover;
@@ -18,12 +17,15 @@ section.slide#cover {
 	-moz-box-sizing: border-box;
 	box-sizing: border-box; }		
 .essaytext { 
+	font-size: 1.1em;
 	width: 50%;
 	min-width: 300px; 
 	margin: 10% 25%; }
 p {
 	margin: 0 0 1em 0; 
-	padding: 0; }	
+	padding: 0; }
+sup {
+	line-height: 0; }		
 blockquote {
 	margin-left: 2em; 
 	font-style: italic; }
@@ -52,7 +54,8 @@ h3 {
 	line-height: 1.5em; 
 	margin-bottom: 1em; }	
 h3#author {
-	color: #fff; }			
+	color: #fff;
+	font-size: 1.25em; }			
 .figure {
 	width: 70%;
 	margin: 1em 15%;
@@ -74,7 +77,7 @@ h3#author {
 .deck-prev-link, .deck-next-link {
 	position: fixed; 
 	background: #701e20;
-	line-height: 1.45em; }	
+	/* line-height: 1.45em;  */}	
 .deck-next-link {
 	right: 24px; }	
 .deck-prev-link {
@@ -107,6 +110,7 @@ h3#author {
 .deck-menu-link:link, .deck-menu-link:visited, .deck-menu-link:hover, .deck-menu-link:focus, .deck-menu-link:active {
 	color: #ccc; } 	
 .demo-banner {
+	font-family: monospace;
 	position: fixed;
 	z-index: 4;
 	top: 0;
@@ -116,8 +120,7 @@ h3#author {
 	text-align: center;
 	text-decoration: none;
 	color: #fff;
-	background: #0188ca;
-	font-size: .7em; }
+	background: #0188ca; }
 .demo-banner a {
 	color: #fff; }	
 ::-moz-selection {
@@ -138,7 +141,9 @@ h3#author {
 	
 @media only screen and (max-width:768px) {
 	section.slide {
-		padding: 2.5em 5% 0px 6%; }
+		padding: 2.5em .5em 0em 1em; }
+	section.slide#cover {
+		background-position: top left; }
 	.essaytext { 
 		width: 100%;
 		min-width: 0;
@@ -161,6 +166,7 @@ h3#author {
 	.smallscreenonly {
 		display: block; }		
 	#swipe {
+		text-shadow: 1px 1px #888;
 		float: right;
 		margin: 0;
 		padding: 0;  }						
