@@ -60,7 +60,7 @@ h3#author {
 	width: 70%;
 	margin: 1em 15%;
 	border-bottom: 1px solid #ccc; } 	
-.figure p, #notes p {
+.figure p, #notes p, #copyright p {
 	font-size: .7em; 
 	line-height: 1.65em; }
 .figure img {
@@ -134,7 +134,14 @@ h3#author {
 	bottom: 20px;
 	left: 48px; 
 	width: 60px;
-	height: 60px; }		
+	height: 60px;
+	fill: #fff; }
+.essaytext #logo {
+	position: relative;
+	bottom: inherit;
+	left: inherit;
+	float: left;
+	fill: #444; }		
 .smallscreenonly {
 	display: none; }
 	
