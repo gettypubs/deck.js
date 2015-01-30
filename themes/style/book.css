@@ -5,8 +5,8 @@
 	line-height: 1.65em; }
 section.slide {
 	width: 100%;
-	margin: 0;
-	padding: 0; }	
+	margin: 0 auto;
+	padding: 0px 48px; }	
 section.slide#cover {
 	background-image: url('../../images/16076.jpg');
 	background-position: bottom left;
